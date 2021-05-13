@@ -1,0 +1,106 @@
+Source code of the programme:
+# Game Development ... Rock , Scissor , Paper ....
+# Made by Sakshyam Gaywali
+import random
+
+opt = ["r","s","p"]
+noa = 1    # It defines number of attempts
+noc = 10    #  It defines number of chances
+usr_scr = 0  # It define users score
+comp_scr = 0  # It defines computer score
+tie = 0        # It defines numbers of ties
+
+    
+
+
+
+
+while (True):
+ user_choice = str(input("Enter your choice\n")).lower()
+ comp_choice = random.choice(opt)
+      # r for Rock and s for Scissor and p for Paper 
+      # Logic of game
+      # Rock can dissolve Scissor
+      # Scissor can dissolve Paper
+      # Paper can dissolve Rock
+
+
+      # It takes input from the user as r or s or p with respect to its value in the above list
+      # It checks the User input with the computer logic as it is defined by random 
+      # After checking both the logic it store values in their respective variables 
+      # And returns the output as per the executions and logics
+      # It takes the input from users for only 10 times
+ if user_choice == "r" and comp_choice == "s":
+         usr_scr +=1
+         noa = noa + 1
+         print("Computer choice is",comp_choice)
+
+ elif comp_choice == "r" and user_choice == "s":
+         comp_scr += 1
+         noa = noa+1
+         print("Computer choice was ",comp_choice)
+    
+ elif user_choice == "p" and comp_choice == "r":
+         usr_scr +=1
+         noa = noa +1
+         print("Computer choice is",comp_choice)
+
+ elif comp_choice == "p" and user_choice == "r":
+         comp_scr += 1
+         noa = noa +1
+         print("Computer choice was ",comp_choice)
+     
+
+ elif user_choice == "s" and comp_choice == "r":
+         usr_scr +=1
+         noa = noa + 1
+         print("Computer choice is",comp_choice)
+
+ elif comp_choice == "s" and user_choice == "r":
+         comp_scr += 1
+         noa = noa +1
+         print("Computer choice was ",comp_choice) 
+
+
+ elif user_choice == comp_choice :
+         tie += 1
+         noa = noa + 1
+         print("tied...")
+         print('You will not get any point for this') 
+
+ if noa == noc:
+
+
+
+     if usr_scr > comp_scr:
+
+
+         print("You won the game ....\n Congratulation")
+         print("Your score is",usr_scr)
+         print("Computer score is ",comp_scr)
+         print("No of match that tied are ", tie)
+
+         break
+
+ if noa == noc:
+
+
+
+     if comp_scr> usr_scr:
+
+         print("What a wonderful game with you ....\n Your are the best competitor that I ever made")
+         print("Computer score is ",comp_scr)
+         print("Your score is",usr_scr) 
+         print("No of match that tied are ", tie)
+
+         break
+
+ if noa == noc:
+
+     if usr_scr == comp_scr:
+
+         print("Match tied...")
+         print("Your score is ",usr_scr)
+         print("Computer score is ",comp_scr)
+         break 
+
